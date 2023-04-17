@@ -10,9 +10,7 @@ type NoteProps = {
 export default function Note({ onDelete }: NoteProps) {
   const note = useNote();
   const navigate = useNavigate();
-  if (!note) {
-    return <div>Loading...</div>;
-  }
+
   return (
     <>
       <Row className="align-items-center mb-4">

@@ -64,7 +64,7 @@ export default function NoteList({
     <>
       <Row className="alignt-items-center mb-4">
         <Col>
-          <h1> Note</h1>
+          <h1>Le mie Note</h1>
         </Col>
         <Col xs="auto">
           <Stack gap={2} direction="horizontal">
@@ -116,6 +116,10 @@ export default function NoteList({
           </Col>
         </Row>
       </Form>
+
+      {filteredNotes.length === 0 && (
+        <h2 className="text-center">Nessuna Nota</h2>
+      )}
 
       <Row xs={1} sm={2} lg={3} xl={4} className="g-3">
         {filteredNotes.map((note) => (
